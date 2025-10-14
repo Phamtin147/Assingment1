@@ -1,0 +1,152 @@
+<Window x:Class="Assignment_01.Views.RoomDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="{Binding DialogTitle}" 
+        Height="500" 
+        Width="600"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,5,0,10"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Background" Value="#404040"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#555555"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,5,0,10"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Background" Value="#404040"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="BorderBrush" Value="#555555"/>
+        </Style>
+        
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        
+        <Style x:Key="SaveButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="#27AE60"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2ECC71"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="CancelButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="#555555"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#666666"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+        
+        <Style x:Key="ErrorTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FF6B6B"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Margin" Value="0,2,0,5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" 
+                  Text="{Binding DialogTitle}" 
+                  FontSize="18" 
+                  FontWeight="Bold" 
+                  HorizontalAlignment="Center" 
+                  Margin="0,0,0,20"/>
+
+        <!-- Form Content -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!-- Room Number -->
+                <TextBlock Text="Số phòng *"/>
+                <TextBox Text="{Binding Room.RoomNumber, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Text="{Binding ValidationErrors[RoomNumber]}" 
+                          Style="{StaticResource ErrorTextStyle}"
+                          Visibility="{Binding ValidationErrors[RoomNumber], Converter={StaticResource StringToVisibilityConverter}}"/>
+
+                <!-- Room Description -->
+                <TextBlock Text="Mô tả phòng"/>
+                <TextBox Text="{Binding Room.RoomDescription, UpdateSourceTrigger=PropertyChanged}" 
+                        Height="60" 
+                        TextWrapping="Wrap" 
+                        AcceptsReturn="True"/>
+
+                <!-- Room Max Capacity -->
+                <TextBlock Text="Sức chứa tối đa *"/>
+                <TextBox Text="{Binding Room.RoomMaxCapacity, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Text="{Binding ValidationErrors[RoomMaxCapacity]}" 
+                          Style="{StaticResource ErrorTextStyle}"
+                          Visibility="{Binding ValidationErrors[RoomMaxCapacity], Converter={StaticResource StringToVisibilityConverter}}"/>
+
+                <!-- Room Price Per Date -->
+                <TextBlock Text="Giá mỗi ngày (VNĐ) *"/>
+                <TextBox Text="{Binding Room.RoomPricePerDate, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Text="{Binding ValidationErrors[RoomPricePerDate]}" 
+                          Style="{StaticResource ErrorTextStyle}"
+                          Visibility="{Binding ValidationErrors[RoomPricePerDate], Converter={StaticResource StringToVisibilityConverter}}"/>
+
+                <!-- Room Type -->
+                <TextBlock Text="Loại phòng *"/>
+                <ComboBox ItemsSource="{Binding RoomTypes}"
+                         DisplayMemberPath="RoomTypeName"
+                         SelectedValuePath="RoomTypeID"
+                         SelectedValue="{Binding Room.RoomTypeID}"/>
+                <TextBlock Text="{Binding ValidationErrors[RoomTypeID]}" 
+                          Style="{StaticResource ErrorTextStyle}"
+                          Visibility="{Binding ValidationErrors[RoomTypeID], Converter={StaticResource StringToVisibilityConverter}}"/>
+
+                <!-- General Error Message -->
+                <TextBlock Text="{Binding ErrorMessage}" 
+                          Style="{StaticResource ErrorTextStyle}"
+                          Visibility="{Binding ErrorMessage, Converter={StaticResource StringToVisibilityConverter}}"
+                          Margin="0,10,0,0"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" 
+                   Orientation="Horizontal" 
+                   HorizontalAlignment="Right" 
+                   Margin="0,20,0,0">
+            <Button Content="Lưu" 
+                   Style="{StaticResource SaveButtonStyle}"
+                   Command="{Binding SaveCommand}"
+                   IsEnabled="{Binding IsLoading, Converter={StaticResource InverseBooleanConverter}}"/>
+            <Button Content="Hủy" 
+                   Style="{StaticResource CancelButtonStyle}"
+                   Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

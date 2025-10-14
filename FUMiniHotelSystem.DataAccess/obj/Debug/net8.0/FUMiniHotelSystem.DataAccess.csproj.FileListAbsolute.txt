@@ -1,0 +1,15 @@
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\bin\Debug\net8.0\FUMiniHotelSystem.DataAccess.deps.json
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\bin\Debug\net8.0\FUMiniHotelSystem.DataAccess.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\bin\Debug\net8.0\FUMiniHotelSystem.DataAccess.pdb
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\bin\Debug\net8.0\FUMiniHotelSystem.BusinessObjects.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\bin\Debug\net8.0\FUMiniHotelSystem.BusinessObjects.pdb
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHotelSystem.DataAccess.csproj.AssemblyReference.cache
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHotelSystem.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHotelSystem.DataAccess.AssemblyInfoInputs.cache
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHotelSystem.DataAccess.AssemblyInfo.cs
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHotelSystem.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHo.F7D18B97.Up2Date
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHotelSystem.DataAccess.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\refint\FUMiniHotelSystem.DataAccess.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\FUMiniHotelSystem.DataAccess.pdb
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.DataAccess\obj\Debug\net8.0\ref\FUMiniHotelSystem.DataAccess.dll

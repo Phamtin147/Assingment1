@@ -1,0 +1,17 @@
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\bin\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.deps.json
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\bin\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\bin\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.pdb
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\bin\Debug\net8.0\FUMiniHotelSystem.BusinessObjects.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\bin\Debug\net8.0\FUMiniHotelSystem.DataAccess.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\bin\Debug\net8.0\FUMiniHotelSystem.BusinessObjects.pdb
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\bin\Debug\net8.0\FUMiniHotelSystem.DataAccess.pdb
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.AssemblyInfo.cs
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHo.88272646.Up2Date
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\refint\FUMiniHotelSystem.BusinessLogic.dll
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\FUMiniHotelSystem.BusinessLogic.pdb
+C:\Users\huhum\Desktop\dotnet\Assignment-01\FUMiniHotelSystem.BusinessLogic\obj\Debug\net8.0\ref\FUMiniHotelSystem.BusinessLogic.dll
