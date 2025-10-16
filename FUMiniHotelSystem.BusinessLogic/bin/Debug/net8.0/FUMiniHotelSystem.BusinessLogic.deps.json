@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FUMiniHotelSystem.BusinessLogic/1.0.0": {
+        "dependencies": {
+          "FUMiniHotelSystem.BusinessObjects": "1.0.0",
+          "FUMiniHotelSystem.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "FUMiniHotelSystem.BusinessLogic.dll": {}
+        }
+      },
+      "FUMiniHotelSystem.BusinessObjects/1.0.0": {
+        "runtime": {
+          "FUMiniHotelSystem.BusinessObjects.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FUMiniHotelSystem.DataAccess/1.0.0": {
+        "dependencies": {
+          "FUMiniHotelSystem.BusinessObjects": "1.0.0"
+        },
+        "runtime": {
+          "FUMiniHotelSystem.DataAccess.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FUMiniHotelSystem.BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FUMiniHotelSystem.BusinessObjects/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FUMiniHotelSystem.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
