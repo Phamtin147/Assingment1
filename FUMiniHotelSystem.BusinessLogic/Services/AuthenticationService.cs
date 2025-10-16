@@ -1,67 +1,45 @@
 using FUMiniHotelSystem.BusinessObjects.DTOs;
-using FUMiniHotelSystem.BusinessObjects.Models;
-using FUMiniHotelSystem.BusinessLogic.Interfaces;
-using FUMiniHotelSystem.DataAccess.Interfaces;
+using FUMiniHotelSystem.DataAccess.Repositories;
 
 namespace FUMiniHotelSystem.BusinessLogic.Services
 {
-    public class AuthenticationService : IAuthenticationService
+    public class AuthenticationService
     {
-        private readonly ICustomerRepository _customerRepository;
+        private readonly CustomerRepository _customerRepo = new();
 
-        public AuthenticationService(ICustomerRepository customerRepository)
+        public LoginResponse Login(LoginRequest request)
         {
-            _customerRepository = customerRepository;
-        }
+            var customer = _customerRepo.GetByEmail(request.Email);
 
-        public async Task<LoginResponse> LoginAsync(LoginRequest request)
-        {
-            var customer = await _customerRepository.GetByEmailAsync(request.Email);
-            
             if (customer == null)
             {
-                return new LoginResponse
-                {
-                    IsSuccess = false,
-                    Message = "Email không tồn tại trong hệ thống."
-                };
+                return new LoginResponse { IsSuccess = false, Message = "Email không tồn tại" };
             }
 
-            if (customer.CustomerStatus != 1) // Not Active
+            if (customer.CustomerStatus != 1)
             {
-                return new LoginResponse
-                {
-                    IsSuccess = false,
-                    Message = "Tài khoản đã bị vô hiệu hóa."
-                };
+                return new LoginResponse { IsSuccess = false, Message = "Tài khoản đã bị vô hiệu hóa" };
             }
 
             if (customer.Password != request.Password)
             {
-                return new LoginResponse
-                {
-                    IsSuccess = false,
-                    Message = "Mật khẩu không chính xác."
-                };
+                return new LoginResponse { IsSuccess = false, Message = "Mật khẩu không chính xác" };
             }
 
-            var isAdmin = await IsAdminAsync(request.Email);
+            bool isAdmin = customer.EmailAddress == "admin@FUMiniHotelSystem.com";
 
             return new LoginResponse
             {
                 IsSuccess = true,
-                Message = "Đăng nhập thành công.",
+                Message = "Đăng nhập thành công",
                 CustomerID = customer.CustomerID,
                 CustomerFullName = customer.CustomerFullName,
                 EmailAddress = customer.EmailAddress,
                 IsAdmin = isAdmin
             };
         }
-
-        public async Task<bool> IsAdminAsync(string email)
-        {
-            return await Task.FromResult(email == "admin@FUMiniHotelSystem.com");
-        }
     }
 }
+
+
 

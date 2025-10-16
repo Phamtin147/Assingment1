@@ -1,0 +1,146 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0-windows7.0": {
+      "FUMiniHotelSystem.BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FUMiniHotelSystem.BusinessObjects": "1.0.0",
+          "FUMiniHotelSystem.DataAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FUMiniHotelSystem.BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FUMiniHotelSystem.BusinessLogic.dll": {}
+        }
+      },
+      "FUMiniHotelSystem.BusinessObjects/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/FUMiniHotelSystem.BusinessObjects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FUMiniHotelSystem.BusinessObjects.dll": {}
+        }
+      },
+      "FUMiniHotelSystem.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FUMiniHotelSystem.BusinessObjects": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FUMiniHotelSystem.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FUMiniHotelSystem.DataAccess.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FUMiniHotelSystem.BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../FUMiniHotelSystem.BusinessLogic/FUMiniHotelSystem.BusinessLogic.csproj",
+      "msbuildProject": "../FUMiniHotelSystem.BusinessLogic/FUMiniHotelSystem.BusinessLogic.csproj"
+    },
+    "FUMiniHotelSystem.BusinessObjects/1.0.0": {
+      "type": "project",
+      "path": "../FUMiniHotelSystem.BusinessObjects/FUMiniHotelSystem.BusinessObjects.csproj",
+      "msbuildProject": "../FUMiniHotelSystem.BusinessObjects/FUMiniHotelSystem.BusinessObjects.csproj"
+    },
+    "FUMiniHotelSystem.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../FUMiniHotelSystem.DataAccess/FUMiniHotelSystem.DataAccess.csproj",
+      "msbuildProject": "../FUMiniHotelSystem.DataAccess/FUMiniHotelSystem.DataAccess.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0-windows7.0": [
+      "FUMiniHotelSystem.BusinessLogic >= 1.0.0",
+      "FUMiniHotelSystem.BusinessObjects >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\huhum\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\FUMiniHotelSystemWPF.csproj",
+      "projectName": "FUMiniHotelSystemWPF",
+      "projectPath": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\FUMiniHotelSystemWPF.csproj",
+      "packagesPath": "C:\\Users\\huhum\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\huhum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "projectReferences": {
+            "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystem.BusinessLogic\\FUMiniHotelSystem.BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystem.BusinessLogic\\FUMiniHotelSystem.BusinessLogic.csproj"
+            },
+            "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystem.BusinessObjects\\FUMiniHotelSystem.BusinessObjects.csproj": {
+              "projectPath": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystem.BusinessObjects\\FUMiniHotelSystem.BusinessObjects.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0-windows7.0": {
+        "targetAlias": "net9.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

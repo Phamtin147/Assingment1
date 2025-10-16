@@ -1,0 +1,12 @@
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\bin\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.deps.json
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\bin\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.dll
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\bin\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.pdb
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.AssemblyInfoInputs.cache
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.AssemblyInfo.cs
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.csproj.CoreCompileInputs.cache
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.sourcelink.json
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.dll
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\refint\FUMiniHotelSystem.BusinessObjects.dll
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\FUMiniHotelSystem.BusinessObjects.pdb
+C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystem.BusinessObjects\obj\Debug\net9.0\ref\FUMiniHotelSystem.BusinessObjects.dll

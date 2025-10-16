@@ -1,0 +1,112 @@
+<Window x:Class="FUMiniHotelSystemWPF.Views.CustomerDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thông tin khách hàng" Height="926" Width="650"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{StaticResource BackgroundGradient}">
+
+    <Border CornerRadius="15" Margin="20">
+        <Border.Background>
+            <SolidColorBrush Color="{StaticResource CardBackground}" Opacity="0.95"/>
+        </Border.Background>
+
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Margin="0,0,0,30">
+                <TextBlock Text="👤" 
+                           FontSize="40" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock x:Name="TitleTextBlock"
+                           Text="Thêm khách hàng mới" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Foreground="{StaticResource TextWhiteBrush}"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Form -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Họ và tên" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="FullNameTextBox" 
+                             Height="45" 
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Email" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="EmailTextBox" 
+                             Height="45" 
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Số điện thoại" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="PhoneTextBox" 
+                             Height="45" 
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Ngày sinh" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <DatePicker x:Name="BirthdayPicker" 
+                                Height="45"
+                                Margin="0,0,0,20"
+                                Style="{StaticResource ModernDatePicker}"/>
+
+                    <TextBlock x:Name="PasswordLabel"
+                               Text="Mật khẩu" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <PasswordBox x:Name="PasswordBox" 
+                                 Height="45" 
+                                 Style="{StaticResource ModernPasswordBox}"
+                                 Margin="0,0,0,20"/>
+
+                    <TextBlock x:Name="ConfirmPasswordLabel"
+                               Text="Xác nhận mật khẩu" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <PasswordBox x:Name="ConfirmPasswordBox" 
+                                 Height="45" 
+                                 Style="{StaticResource ModernPasswordBox}"/>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Buttons -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <Button x:Name="SaveButton" 
+                        Content="💾 Lưu" 
+                        Width="150" Height="50" 
+                        Style="{StaticResource SuccessButton}"
+                        Margin="0,0,10,0" 
+                        Click="SaveButton_Click"/>
+                <Button x:Name="CancelButton" 
+                        Content="❌ Hủy" 
+                        Width="150" Height="50" 
+                        Style="{StaticResource SecondaryButton}"
+                        Margin="10,0,0,0" 
+                        Click="CancelButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,183 @@
+<Window x:Class="FUMiniHotelSystemWPF.Views.BookingDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Đặt phòng" Height="960" Width="842"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{StaticResource BackgroundGradient}">
+
+    <Border CornerRadius="15" Margin="20">
+        <Border.Background>
+            <SolidColorBrush Color="{StaticResource CardBackground}" Opacity="0.95"/>
+        </Border.Background>
+
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Margin="0,0,0,30">
+                <TextBlock Text="🏨" 
+                           FontSize="40" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="Đặt phòng khách sạn" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Foreground="{StaticResource TextWhiteBrush}"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="Chọn phòng và ngày để đặt" 
+                           FontSize="13" 
+                           Foreground="{StaticResource TextMutedBrush}"
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <!-- Form -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Chọn phòng" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <ComboBox x:Name="RoomComboBox" 
+                              Height="60" 
+                              Margin="0,0,0,20"
+                              Style="{StaticResource ModernComboBox}"
+                              ItemContainerStyle="{StaticResource ModernComboBoxItem}"
+                              SelectionChanged="RoomComboBox_SelectionChanged">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="5">
+                                    <TextBlock Foreground="{StaticResource TextWhiteBrush}">
+                                        <Run Text="🛏️ Phòng " FontWeight="Bold"/>
+                                        <Run Text="{Binding RoomNumber}" FontWeight="Bold"/>
+                                        <Run Text=" - "/>
+                                        <Run Text="{Binding RoomType.RoomTypeName}"/>
+                                    </TextBlock>
+                                    <TextBlock FontSize="11" Foreground="{StaticResource TextMutedBrush}" Margin="0,3,0,0">
+                                        <Run Text="👥 Sức chứa: "/>
+                                        <Run Text="{Binding RoomMaxCapacity}"/>
+                                        <Run Text=" người | 💰 Giá: "/>
+                                        <Run Text="{Binding RoomPricePerDate, StringFormat=N0}"/>
+                                        <Run Text=" VND/ngày"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="Ngày check-in" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <DatePicker x:Name="CheckInDatePicker" 
+                                Height="45"
+                                Margin="0,0,0,20"
+                                Style="{StaticResource ModernDatePicker}"
+                                SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+
+                    <TextBlock Text="Ngày check-out" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <DatePicker x:Name="CheckOutDatePicker" 
+                                Height="45"
+                                Margin="0,0,0,20"
+                                Style="{StaticResource ModernDatePicker}"
+                                SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+
+                    <!-- Booking Summary -->
+                    <Border Background="{StaticResource PrimaryVioletBrush}" 
+                            CornerRadius="10" 
+                            Padding="20" 
+                            Margin="0,10,0,20">
+                        <StackPanel>
+                            <TextBlock Text="📋 Thông tin đặt phòng" 
+                                       FontWeight="Bold" 
+                                       FontSize="16" 
+                                       Foreground="{StaticResource TextWhiteBrush}"
+                                       Margin="0,0,0,15"/>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="Số ngày thuê:" 
+                                               Foreground="{StaticResource TextGrayBrush}" 
+                                               FontSize="13"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Giá mỗi ngày:" 
+                                               Foreground="{StaticResource TextGrayBrush}" 
+                                               FontSize="13"
+                                               Margin="0,0,0,8"/>
+                                    <Separator Margin="0,10" Background="{StaticResource TextMutedBrush}"/>
+                                    <TextBlock Text="Tổng tiền:" 
+                                               FontWeight="Bold" 
+                                               FontSize="16" 
+                                               Foreground="{StaticResource SuccessBrush}"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+                                    <TextBlock x:Name="NumberOfDaysTextBlock" 
+                                               Text="0 ngày" 
+                                               Foreground="{StaticResource TextWhiteBrush}"
+                                               FontSize="13"
+                                               Margin="0,0,0,8"
+                                               HorizontalAlignment="Right"/>
+                                    <TextBlock x:Name="PricePerDayTextBlock" 
+                                               Text="0 VND" 
+                                               Foreground="{StaticResource TextWhiteBrush}"
+                                               FontSize="13"
+                                               Margin="0,0,0,8"
+                                               HorizontalAlignment="Right"/>
+                                    <Separator Margin="0,10" Background="{StaticResource TextMutedBrush}"/>
+                                    <TextBlock x:Name="TotalAmountTextBlock" 
+                                               Text="0 VND" 
+                                               FontWeight="Bold" 
+                                               FontSize="18" 
+                                               Foreground="{StaticResource SuccessBrush}"
+                                               HorizontalAlignment="Right"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <TextBlock Text="Ghi chú (tùy chọn)" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="NoteTextBox" 
+                             Height="70" 
+                             Style="{StaticResource ModernTextBox}"
+                             TextWrapping="Wrap" 
+                             AcceptsReturn="True" 
+                             VerticalScrollBarVisibility="Auto"/>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Buttons -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <Button x:Name="BookButton" 
+                        Content="🏨 Đặt phòng" 
+                        Width="170" Height="55" 
+                        Style="{StaticResource SuccessButton}"
+                        FontSize="16"
+                        Margin="0,0,10,0" 
+                        Click="BookButton_Click"/>
+                <Button x:Name="CancelButton" 
+                        Content="❌ Hủy" 
+                        Width="150" Height="55" 
+                        Style="{StaticResource SecondaryButton}"
+                        Margin="10,0,0,0" 
+                        Click="CancelButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

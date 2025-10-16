@@ -1,0 +1,161 @@
+<Window x:Class="FUMiniHotelSystemWPF.Views.AdminBookingDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sửa thông tin đặt phòng" Height="750" Width="650"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{StaticResource BackgroundGradient}">
+    
+    <Border CornerRadius="15" Margin="20">
+        <Border.Background>
+            <SolidColorBrush Color="{StaticResource CardBackground}" Opacity="0.95"/>
+        </Border.Background>
+        
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Margin="0,0,0,30">
+                <TextBlock Text="✏️" 
+                           FontSize="40" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock Text="Sửa thông tin đặt phòng" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Foreground="{StaticResource TextWhiteBrush}"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+            
+            <!-- Form -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Mã đặt phòng" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="BookingIdTextBox" 
+                             Height="45" 
+                             Style="{StaticResource ModernTextBox}"
+                             IsReadOnly="True"
+                             Margin="0,0,0,20"/>
+                    
+                    <TextBlock Text="Khách hàng" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <ComboBox x:Name="CustomerComboBox" 
+                              Height="45" 
+                              Margin="0,0,0,20"
+                              Style="{StaticResource ModernComboBox}"
+                              ItemContainerStyle="{StaticResource ModernComboBoxItem}"
+                              DisplayMemberPath="CustomerFullName" 
+                              SelectedValuePath="CustomerID"/>
+                    
+                    <TextBlock Text="Phòng" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <ComboBox x:Name="RoomComboBox" 
+                              Height="60" 
+                              Margin="0,0,0,20"
+                              Style="{StaticResource ModernComboBox}"
+                              ItemContainerStyle="{StaticResource ModernComboBoxItem}"
+                              SelectionChanged="RoomComboBox_SelectionChanged">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="5">
+                                    <TextBlock Foreground="{StaticResource TextWhiteBrush}">
+                                        <Run Text="Phòng "/>
+                                        <Run Text="{Binding RoomNumber}" FontWeight="Bold"/>
+                                        <Run Text=" - "/>
+                                        <Run Text="{Binding RoomType.RoomTypeName}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    
+                    <TextBlock Text="Ngày check-in" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <DatePicker x:Name="CheckInDatePicker" 
+                                Height="45"
+                                Margin="0,0,0,20"
+                                Style="{StaticResource ModernDatePicker}"
+                                SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+                    
+                    <TextBlock Text="Ngày check-out" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <DatePicker x:Name="CheckOutDatePicker" 
+                                Height="45"
+                                Margin="0,0,0,20"
+                                Style="{StaticResource ModernDatePicker}"
+                                SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+                    
+                    <TextBlock Text="Trạng thái" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <ComboBox x:Name="StatusComboBox" 
+                              Height="45"
+                              Margin="0,0,0,20"
+                              Style="{StaticResource ModernComboBox}"
+                              ItemContainerStyle="{StaticResource ModernComboBoxItem}">
+                        <ComboBoxItem Content="Chờ xác nhận" Tag="1"/>
+                        <ComboBoxItem Content="Đã xác nhận" Tag="2"/>
+                        <ComboBoxItem Content="Đã hủy" Tag="3"/>
+                    </ComboBox>
+                    
+                    <!-- Total Amount -->
+                    <Border Background="{StaticResource PrimaryVioletBrush}" 
+                            CornerRadius="10" 
+                            Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="💰 Thông tin chi phí" 
+                                       FontWeight="Bold" 
+                                       FontSize="16" 
+                                       Foreground="{StaticResource TextWhiteBrush}"
+                                       Margin="0,0,0,10"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="SpaceBetween">
+                                <TextBlock Text="Tổng tiền:" 
+                                           FontWeight="Bold" 
+                                           FontSize="18" 
+                                           Foreground="{StaticResource SuccessBrush}"/>
+                                <TextBlock x:Name="TotalAmountTextBlock" 
+                                           Text="0 VND" 
+                                           FontWeight="Bold" 
+                                           FontSize="18" 
+                                           Foreground="{StaticResource SuccessBrush}"
+                                           HorizontalAlignment="Right"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+            
+            <!-- Buttons -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <Button x:Name="SaveButton" 
+                        Content="💾 Lưu" 
+                        Width="150" Height="50" 
+                        Style="{StaticResource SuccessButton}"
+                        Margin="0,0,10,0" 
+                        Click="SaveButton_Click"/>
+                <Button x:Name="CancelButton" 
+                        Content="❌ Hủy" 
+                        Width="150" Height="50" 
+                        Style="{StaticResource SecondaryButton}"
+                        Margin="10,0,0,0" 
+                        Click="CancelButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

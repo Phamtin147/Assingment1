@@ -1,0 +1,120 @@
+<Window x:Class="FUMiniHotelSystemWPF.Views.RoomDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thông tin phòng" Height="945" Width="810"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{StaticResource BackgroundGradient}">
+
+    <Border CornerRadius="15" Margin="20">
+        <Border.Background>
+            <SolidColorBrush Color="{StaticResource CardBackground}" Opacity="0.95"/>
+        </Border.Background>
+
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <StackPanel Grid.Row="0" Margin="0,0,0,30">
+                <TextBlock Text="🛏️" 
+                           FontSize="40" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock x:Name="TitleTextBlock"
+                           Text="Thêm phòng mới" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Foreground="{StaticResource TextWhiteBrush}"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Form -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Số phòng" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="RoomNumberTextBox" 
+                             Height="45" 
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Loại phòng" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <ComboBox x:Name="RoomTypeComboBox" 
+                              Height="45" 
+                              Margin="0,0,0,20"
+                              Style="{StaticResource ModernComboBox}"
+                              ItemContainerStyle="{StaticResource ModernComboBoxItem}"
+                              DisplayMemberPath="RoomTypeName" 
+                              SelectedValuePath="RoomTypeID"/>
+
+                    <TextBlock Text="Mô tả" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="DescriptionTextBox" 
+                             Height="80" 
+                             Style="{StaticResource ModernTextBox}"
+                             TextWrapping="Wrap" 
+                             AcceptsReturn="True" 
+                             VerticalScrollBarVisibility="Auto"
+                             Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Sức chứa tối đa" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="MaxCapacityTextBox" 
+                             Height="45" 
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Giá thuê mỗi ngày (VND)" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <TextBox x:Name="PriceTextBox" 
+                             Height="45" 
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Trạng thái" 
+                               Foreground="{StaticResource TextGrayBrush}" 
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+                    <ComboBox x:Name="StatusComboBox" 
+                              Height="45"
+                              Style="{StaticResource ModernComboBox}"
+                              ItemContainerStyle="{StaticResource ModernComboBoxItem}">
+                        <ComboBoxItem Content="Hoạt động" Tag="1" IsSelected="True"/>
+                        <ComboBoxItem Content="Không hoạt động" Tag="2"/>
+                    </ComboBox>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Buttons -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <Button x:Name="SaveButton" 
+                        Content="💾 Lưu" 
+                        Width="150" Height="50" 
+                        Style="{StaticResource SuccessButton}"
+                        Margin="0,0,10,0" 
+                        Click="SaveButton_Click"/>
+                <Button x:Name="CancelButton" 
+                        Content="❌ Hủy" 
+                        Width="150" Height="50" 
+                        Style="{StaticResource SecondaryButton}"
+                        Margin="10,0,0,0" 
+                        Click="CancelButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

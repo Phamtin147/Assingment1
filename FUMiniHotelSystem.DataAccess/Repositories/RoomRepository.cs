@@ -1,87 +1,47 @@
-using System.Linq.Expressions;
 using FUMiniHotelSystem.BusinessObjects.Models;
 using FUMiniHotelSystem.DataAccess.Database;
-using FUMiniHotelSystem.DataAccess.Interfaces;
 
 namespace FUMiniHotelSystem.DataAccess.Repositories
 {
-    public class RoomRepository : BaseRepository<RoomInformation>, IRoomRepository
+    public class RoomRepository
     {
-        protected override IEnumerable<RoomInformation> GetAll()
+        private readonly InMemoryDatabase _db = InMemoryDatabase.Instance;
+
+        public List<RoomInformation> GetAll() => _db.RoomInformations.Where(r => r.RoomStatus == 1).ToList();
+
+        public RoomInformation? GetById(int id) => _db.RoomInformations.FirstOrDefault(r => r.RoomID == id);
+
+        public void Add(RoomInformation room)
         {
-            return _database.RoomInformations.ToList();
+            room.RoomID = _db.GetNextRoomId();
+            _db.RoomInformations.Add(room);
         }
 
-        protected override RoomInformation? GetById(int id)
+        public void Update(RoomInformation room)
         {
-            return _database.RoomInformations.FirstOrDefault(r => r.RoomID == id);
-        }
-
-        protected override IEnumerable<RoomInformation> Find(Expression<Func<RoomInformation, bool>> predicate)
-        {
-            return _database.RoomInformations.AsQueryable().Where(predicate).ToList();
-        }
-
-        protected override RoomInformation Add(RoomInformation entity)
-        {
-            entity.RoomID = _database.GetNextRoomId();
-            _database.RoomInformations.Add(entity);
-            return entity;
-        }
-
-        protected override void Update(RoomInformation entity)
-        {
-            var existingRoom = _database.RoomInformations.FirstOrDefault(r => r.RoomID == entity.RoomID);
-            if (existingRoom != null)
+            var existing = _db.RoomInformations.FirstOrDefault(r => r.RoomID == room.RoomID);
+            if (existing != null)
             {
-                var index = _database.RoomInformations.IndexOf(existingRoom);
-                _database.RoomInformations[index] = entity;
+                var index = _db.RoomInformations.IndexOf(existing);
+                _db.RoomInformations[index] = room;
             }
         }
 
-        protected override void Delete(int id)
+        public void Delete(int id)
         {
-            var room = _database.RoomInformations.FirstOrDefault(r => r.RoomID == id);
+            var room = _db.RoomInformations.FirstOrDefault(r => r.RoomID == id);
             if (room != null)
             {
-                room.RoomStatus = 2; // Mark as deleted
+                room.RoomStatus = 2; // Soft delete
             }
         }
 
-        protected override bool Exists(int id)
+        public bool RoomNumberExists(string roomNumber, int? excludeId = null)
         {
-            return _database.RoomInformations.Any(r => r.RoomID == id);
-        }
-
-        public async Task<IEnumerable<RoomInformation>> GetAvailableRoomsAsync(DateTime checkIn, DateTime checkOut)
-        {
-            var bookedRoomIds = _database.Bookings
-                .Where(b => b.BookingStatus == 1 || b.BookingStatus == 2) // Pending or Confirmed
-                .Where(b => (b.CheckInDate < checkOut && b.CheckOutDate > checkIn))
-                .Select(b => b.RoomID)
-                .Distinct();
-
-            var availableRooms = _database.RoomInformations
-                .Where(r => r.RoomStatus == 1 && !bookedRoomIds.Contains(r.RoomID))
-                .ToList();
-
-            return await Task.FromResult(availableRooms);
-        }
-
-        public async Task<IEnumerable<RoomInformation>> GetRoomsByTypeAsync(int roomTypeId)
-        {
-            return await Task.FromResult(_database.RoomInformations.Where(r => r.RoomTypeID == roomTypeId && r.RoomStatus == 1).ToList());
-        }
-
-        public async Task<bool> IsRoomNumberExistsAsync(string roomNumber, int? excludeId = null)
-        {
-            var query = _database.RoomInformations.Where(r => r.RoomNumber == roomNumber);
-            if (excludeId.HasValue)
-            {
-                query = query.Where(r => r.RoomID != excludeId.Value);
-            }
-            return await Task.FromResult(query.Any());
+            return _db.RoomInformations.Any(r => r.RoomNumber == roomNumber && (!excludeId.HasValue || r.RoomID != excludeId.Value));
         }
     }
 }
+
+
 

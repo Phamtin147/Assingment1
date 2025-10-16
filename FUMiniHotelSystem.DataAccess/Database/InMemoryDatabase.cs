@@ -73,6 +73,67 @@ namespace FUMiniHotelSystem.DataAccess.Database
                     CustomerBirthday = new DateTime(1992, 8, 20),
                     CustomerStatus = 1,
                     Password = "password456"
+                },
+                new Customer
+                {
+                    CustomerID = 4,
+                    CustomerFullName = "Le Van C",
+                    Telephone = "0901234567",
+                    EmailAddress = "levanc@email.com",
+                    CustomerBirthday = new DateTime(1990, 3, 10),
+                    CustomerStatus = 1,
+                    Password = "password789"
+                },
+                new Customer
+                {
+                    CustomerID = 5,
+                    CustomerFullName = "Pham Thi D",
+                    Telephone = "0923456789",
+                    EmailAddress = "phamthid@email.com",
+                    CustomerBirthday = new DateTime(1995, 12, 25),
+                    CustomerStatus = 1,
+                    Password = "password321"
+                }
+            });
+
+            // Initialize Sample Bookings
+            Bookings.AddRange(new List<Booking>
+            {
+                new Booking
+                {
+                    BookingID = 1,
+                    CustomerID = 2,
+                    RoomID = 1,
+                    BookingDate = DateTime.Now.AddDays(-10),
+                    CheckInDate = DateTime.Now.AddDays(-5),
+                    CheckOutDate = DateTime.Now.AddDays(-2),
+                    TotalAmount = 300000,
+                    BookingStatus = 2,
+                    CreatedDate = DateTime.Now.AddDays(-10)
+                },
+                new Booking
+                {
+                    BookingID = 2,
+                    CustomerID = 3,
+                    RoomID = 3,
+                    BookingDate = DateTime.Now.AddDays(-8),
+                    CheckInDate = DateTime.Now.AddDays(-3),
+                    CheckOutDate = DateTime.Now.AddDays(2),
+                    TotalAmount = 1000000,
+                    BookingStatus = 2,
+                    CreatedDate = DateTime.Now.AddDays(-8)
+                },
+                new Booking
+                {
+                    BookingID = 3,
+                    CustomerID = 4,
+                    RoomID = 5,
+                    BookingDate = DateTime.Now.AddDays(-15),
+                    CheckInDate = DateTime.Now.AddDays(-10),
+                    CheckOutDate = DateTime.Now.AddDays(-5),
+                    TotalAmount = 2000000,
+                    BookingStatus = 2,
+                    CreatedDate = DateTime.Now.AddDays(-15)
                 }
             });
         }
@@ -83,4 +144,3 @@ namespace FUMiniHotelSystem.DataAccess.Database
         public int GetNextBookingId() => Bookings.Count > 0 ? Bookings.Max(b => b.BookingID) + 1 : 1;
     }
 }
-

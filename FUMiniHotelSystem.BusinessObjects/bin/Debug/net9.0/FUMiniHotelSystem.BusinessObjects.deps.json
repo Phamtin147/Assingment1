@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "FUMiniHotelSystem.BusinessObjects/1.0.0": {
+        "runtime": {
+          "FUMiniHotelSystem.BusinessObjects.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FUMiniHotelSystem.BusinessObjects/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

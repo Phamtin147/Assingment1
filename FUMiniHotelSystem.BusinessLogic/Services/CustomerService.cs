@@ -1,94 +1,62 @@
 using FUMiniHotelSystem.BusinessObjects.Models;
-using FUMiniHotelSystem.BusinessLogic.Interfaces;
-using FUMiniHotelSystem.DataAccess.Interfaces;
+using FUMiniHotelSystem.DataAccess.Repositories;
 
 namespace FUMiniHotelSystem.BusinessLogic.Services
 {
-    public class CustomerService : ICustomerService
+    public class CustomerService
     {
-        private readonly ICustomerRepository _customerRepository;
+        private readonly CustomerRepository _customerRepo = new();
 
-        public CustomerService(ICustomerRepository customerRepository)
+        public List<Customer> GetAllCustomers() => _customerRepo.GetAll();
+
+        public Customer? GetCustomerById(int id) => _customerRepo.GetById(id);
+
+        public void AddCustomer(Customer customer)
         {
-            _customerRepository = customerRepository;
+            if (string.IsNullOrWhiteSpace(customer.CustomerFullName))
+                throw new Exception("Tên khách hàng không được để trống");
+
+            if (string.IsNullOrWhiteSpace(customer.EmailAddress))
+                throw new Exception("Email không được để trống");
+
+            if (_customerRepo.EmailExists(customer.EmailAddress))
+                throw new Exception("Email đã tồn tại");
+
+            customer.CustomerStatus = 1;
+            _customerRepo.Add(customer);
         }
 
-        public async Task<IEnumerable<Customer>> GetAllCustomersAsync()
+        public void UpdateCustomer(Customer customer)
         {
-            return await _customerRepository.GetActiveCustomersAsync();
+            if (string.IsNullOrWhiteSpace(customer.CustomerFullName))
+                throw new Exception("Tên khách hàng không được để trống");
+
+            if (string.IsNullOrWhiteSpace(customer.EmailAddress))
+                throw new Exception("Email không được để trống");
+
+            if (_customerRepo.EmailExists(customer.EmailAddress, customer.CustomerID))
+                throw new Exception("Email đã tồn tại");
+
+            _customerRepo.Update(customer);
         }
 
-        public async Task<Customer?> GetCustomerByIdAsync(int id)
+        public void DeleteCustomer(int id) => _customerRepo.Delete(id);
+
+        public List<Customer> SearchCustomers(string keyword)
         {
-            return await _customerRepository.GetByIdAsync(id);
-        }
+            var customers = _customerRepo.GetAll();
+            if (string.IsNullOrWhiteSpace(keyword))
+                return customers;
 
-        public async Task<Customer?> GetCustomerByEmailAsync(string email)
-        {
-            return await _customerRepository.GetByEmailAsync(email);
-        }
-
-        public async Task<Customer> CreateCustomerAsync(Customer customer)
-        {
-            // Validate email uniqueness
-            if (await _customerRepository.IsEmailExistsAsync(customer.EmailAddress))
-            {
-                throw new InvalidOperationException("Email đã tồn tại trong hệ thống.");
-            }
-
-            customer.CustomerStatus = 1; // Active
-            return await _customerRepository.AddAsync(customer);
-        }
-
-        public async Task<Customer> UpdateCustomerAsync(Customer customer)
-        {
-            var existingCustomer = await _customerRepository.GetByIdAsync(customer.CustomerID);
-            if (existingCustomer == null)
-            {
-                throw new InvalidOperationException("Khách hàng không tồn tại.");
-            }
-
-            // Validate email uniqueness (excluding current customer)
-            if (await _customerRepository.IsEmailExistsAsync(customer.EmailAddress, customer.CustomerID))
-            {
-                throw new InvalidOperationException("Email đã tồn tại trong hệ thống.");
-            }
-
-            await _customerRepository.UpdateAsync(customer);
-            return customer;
-        }
-
-        public async Task DeleteCustomerAsync(int id)
-        {
-            var customer = await _customerRepository.GetByIdAsync(id);
-            if (customer == null)
-            {
-                throw new InvalidOperationException("Khách hàng không tồn tại.");
-            }
-
-            await _customerRepository.DeleteAsync(id);
-        }
-
-        public async Task<IEnumerable<Customer>> SearchCustomersAsync(string searchTerm)
-        {
-            var allCustomers = await _customerRepository.GetActiveCustomersAsync();
-            
-            if (string.IsNullOrWhiteSpace(searchTerm))
-            {
-                return allCustomers;
-            }
-
-            return allCustomers.Where(c => 
-                c.CustomerFullName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
-                c.EmailAddress.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
-                c.Telephone.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+            keyword = keyword.ToLower();
+            return customers.Where(c =>
+                c.CustomerFullName.ToLower().Contains(keyword) ||
+                c.EmailAddress.ToLower().Contains(keyword) ||
+                c.Telephone.Contains(keyword)
             ).ToList();
-        }
-
-        public async Task<bool> IsEmailExistsAsync(string email, int? excludeId = null)
-        {
-            return await _customerRepository.IsEmailExistsAsync(email, excludeId);
         }
     }
 }
+
+
 
