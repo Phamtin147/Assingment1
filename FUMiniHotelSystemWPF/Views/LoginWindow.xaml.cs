@@ -1,22 +1,27 @@
 using System.Windows;
 using FUMiniHotelSystem.BusinessObjects.DTOs;
-using FUMiniHotelSystem.BusinessLogic.Services;
+using FUMiniHotelSystemWPF.ViewModels;
 
 namespace FUMiniHotelSystemWPF.Views
 {
     public partial class LoginWindow : Window
     {
-        private readonly AuthenticationService _authService = new();
+        private readonly LoginViewModel _viewModel;
 
         public LoginWindow()
         {
             InitializeComponent();
+            _viewModel = new LoginViewModel();
+            DataContext = _viewModel;
+
+            _viewModel.LoginSuccess += OnLoginSuccess;
+            _viewModel.CloseRequested += OnCloseRequested;
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            ErrorTextBlock.Text = "";
-            ErrorTextBlock.Visibility = Visibility.Collapsed;
+            _viewModel.Password = PasswordBox.Password;
+            _viewModel.ClearError();
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -26,41 +31,28 @@ namespace FUMiniHotelSystemWPF.Views
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var request = new LoginRequest
-                {
-                    Email = EmailTextBox.Text,
-                    Password = PasswordBox.Password
-                };
+            _viewModel.Password = PasswordBox.Password;
+            _viewModel.LoginCommand.Execute(null);
+        }
 
-                var response = _authService.Login(request);
-
-                if (response.IsSuccess)
-                {
-                    if (response.IsAdmin)
-                    {
-                        var adminWindow = new AdminDashboardWindow(response);
-                        adminWindow.Show();
-                    }
-                    else
-                    {
-                        var customerWindow = new CustomerDashboardWindow(response);
-                        customerWindow.Show();
-                    }
-                    this.Close();
-                }
-                else
-                {
-                    ErrorTextBlock.Text = response.Message;
-                    ErrorTextBlock.Visibility = Visibility.Visible;
-                }
-            }
-            catch (Exception ex)
+        private void OnLoginSuccess(object? sender, LoginResponse response)
+        {
+            if (response.IsAdmin)
             {
-                ErrorTextBlock.Text = $"Lỗi: {ex.Message}";
-                ErrorTextBlock.Visibility = Visibility.Visible;
+                var adminWindow = new AdminDashboardWindow(response);
+                adminWindow.Show();
             }
+            else
+            {
+                var customerWindow = new CustomerDashboardWindow(response);
+                customerWindow.Show();
+            }
+            this.Close();
+        }
+
+        private void OnCloseRequested(object? sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

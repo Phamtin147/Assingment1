@@ -40,6 +40,7 @@
                                HorizontalAlignment="Center"/>
                     
                     <TextBlock x:Name="WelcomeTextBlock"
+                               Text="{Binding WelcomeText}"
                                FontSize="12" 
                                Foreground="{StaticResource TextMutedBrush}" 
                                HorizontalAlignment="Center"
@@ -48,21 +49,21 @@
                 
                 <!-- Navigation Menu -->
                 <StackPanel Grid.Row="1" Margin="10,0">
-                    <Button x:Name="ProfileBtn" Style="{StaticResource SidebarButton}" Click="NavigateToProfile" Tag="Selected">
+                    <Button x:Name="ProfileBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToProfileCommand}" Tag="{Binding ProfileButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="👤" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Thông tin cá nhân" FontSize="14"/>
                         </StackPanel>
                     </Button>
                     
-                    <Button x:Name="BookingBtn" Style="{StaticResource SidebarButton}" Click="NavigateToBooking">
+                    <Button x:Name="BookingBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToBookingCommand}" Tag="{Binding BookingButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="🏨" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Đặt phòng" FontSize="14"/>
                         </StackPanel>
                     </Button>
                     
-                    <Button x:Name="HistoryBtn" Style="{StaticResource SidebarButton}" Click="NavigateToHistory">
+                    <Button x:Name="HistoryBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToHistoryCommand}" Tag="{Binding HistoryButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="📋" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Lịch sử đặt phòng" FontSize="14"/>
@@ -73,7 +74,7 @@
                 <!-- Logout Button -->
                 <Button Grid.Row="2" Style="{StaticResource ErrorButton}" 
                         Margin="10,10,10,20" Height="45"
-                        Click="Logout_Click">
+                        Command="{Binding LogoutCommand}">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="🚪" FontSize="18" Margin="0,0,10,0"/>
                         <TextBlock Text="Đăng xuất" FontSize="14"/>
@@ -85,7 +86,7 @@
         <!-- Main Content Area -->
         <Grid Grid.Column="1" Margin="20">
             <!-- Profile View -->
-            <Grid x:Name="ProfileView" Visibility="Visible">
+            <Grid x:Name="ProfileView" Visibility="{Binding ProfileViewVisibility}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel>
                         <TextBlock Text="👤 Thông tin cá nhân" 
@@ -106,6 +107,7 @@
                                            FontSize="13"
                                            Margin="0,0,0,8"/>
                                 <TextBox x:Name="FullNameTextBox" 
+                                         Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}"
                                          Height="45" 
                                          Style="{StaticResource ModernTextBox}"
                                          Margin="0,0,0,20"/>
@@ -116,6 +118,7 @@
                                            FontSize="13"
                                            Margin="0,0,0,8"/>
                                 <TextBox x:Name="EmailTextBox" 
+                                         Text="{Binding Email}"
                                          Height="45" 
                                          Style="{StaticResource ModernTextBox}"
                                          IsReadOnly="True"
@@ -127,6 +130,7 @@
                                            FontSize="13"
                                            Margin="0,0,0,8"/>
                                 <TextBox x:Name="PhoneTextBox" 
+                                         Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"
                                          Height="45" 
                                          Style="{StaticResource ModernTextBox}"
                                          Margin="0,0,0,20"/>
@@ -137,6 +141,7 @@
                                            FontSize="13"
                                            Margin="0,0,0,8"/>
                                 <DatePicker x:Name="BirthdayPicker" 
+                                            SelectedDate="{Binding Birthday}"
                                             Height="45"
                                             Margin="0,0,0,20"
                                             Style="{StaticResource ModernDatePicker}"/>
@@ -145,7 +150,7 @@
                                         Height="50" 
                                         Style="{StaticResource SuccessButton}"
                                         Margin="0,20,0,0"
-                                        Click="UpdateProfile_Click"/>
+                                        Command="{Binding UpdateProfileCommand}"/>
                             </StackPanel>
                         </Border>
                     </StackPanel>
@@ -153,7 +158,7 @@
             </Grid>
             
             <!-- Booking View -->
-            <Grid x:Name="BookingView" Visibility="Collapsed">
+            <Grid x:Name="BookingView" Visibility="{Binding BookingViewVisibility}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel>
                         <TextBlock Text="🏨 Đặt phòng khách sạn" 
@@ -191,7 +196,7 @@
                                         Height="60" 
                                         Style="{StaticResource ModernButton}"
                                         FontSize="18"
-                                        Click="NewBooking_Click"/>
+                                        Command="{Binding NewBookingCommand}"/>
                             </StackPanel>
                         </Border>
                     </StackPanel>
@@ -199,7 +204,7 @@
             </Grid>
             
             <!-- History View -->
-            <Grid x:Name="HistoryView" Visibility="Collapsed">
+            <Grid x:Name="HistoryView" Visibility="{Binding HistoryViewVisibility}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -216,12 +221,13 @@
                     <Button Content="🔄 Làm mới" 
                             Width="130" Height="45"
                             Style="{StaticResource ModernButton}"
-                            Click="RefreshBookings_Click"/>
+                            Command="{Binding RefreshBookingsCommand}"/>
                 </StackPanel>
                 
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
                     <DataGrid x:Name="BookingHistoryDataGrid" 
+                              ItemsSource="{Binding BookingHistory}"
                               Style="{StaticResource ModernDataGrid}"
                               ColumnHeaderStyle="{StaticResource ModernColumnHeader}"
                               CellStyle="{StaticResource ModernCell}">

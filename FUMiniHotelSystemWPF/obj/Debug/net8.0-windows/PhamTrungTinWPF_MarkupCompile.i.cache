@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\Users\huhum\Documents\Github\Assingment1\FUMiniHotelSystemWPF\App.xaml
 14-1297166758
 
-14-1363620730
+1975420916
 2012076826069
 MainWindow.xaml;Styles\ButtonStyles.xaml;Styles\Colors.xaml;Styles\ComboBoxStyles.xaml;Styles\DataGridStyles.xaml;Styles\DatePickerStyles.xaml;Styles\TextBoxStyles.xaml;Views\AdminBookingDialog.xaml;Views\AdminDashboardWindow.xaml;Views\BookingDialog.xaml;Views\CustomerDashboardWindow.xaml;Views\CustomerDialog.xaml;Views\LoginWindow.xaml;Views\RoomDialog.xaml;
 
-False
+True
 

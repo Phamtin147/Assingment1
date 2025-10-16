@@ -19,13 +19,13 @@
         
         <!-- Sidebar -->
         <Border Grid.Column="0" Background="{StaticResource SidebarDarkBrush}" CornerRadius="0,20,0,0">
-            <Grid>
-                <Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                
+        </Grid.RowDefinitions>
+
                 <!-- Logo & Title -->
                 <StackPanel Grid.Row="0" Margin="20,30,20,40">
                     <Ellipse Width="60" Height="60" Margin="0,0,0,15">
@@ -45,6 +45,7 @@
                                HorizontalAlignment="Center"/>
                     
                     <TextBlock x:Name="WelcomeTextBlock"
+                               Text="{Binding WelcomeText}"
                                FontSize="12" 
                                Foreground="{StaticResource TextMutedBrush}" 
                                HorizontalAlignment="Center"
@@ -53,46 +54,46 @@
                 
                 <!-- Navigation Menu -->
                 <StackPanel Grid.Row="1" Margin="10,0">
-                    <Button x:Name="DashboardBtn" Style="{StaticResource SidebarButton}" Click="NavigateToDashboard" Tag="Selected">
+                    <Button x:Name="DashboardBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToDashboardCommand}" Tag="{Binding DashboardButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="📊" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Tổng quan" FontSize="14"/>
                         </StackPanel>
                     </Button>
                     
-                    <Button x:Name="CustomersBtn" Style="{StaticResource SidebarButton}" Click="NavigateToCustomers">
+                    <Button x:Name="CustomersBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToCustomersCommand}" Tag="{Binding CustomersButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="👥" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Khách hàng" FontSize="14"/>
                         </StackPanel>
                     </Button>
                     
-                    <Button x:Name="RoomsBtn" Style="{StaticResource SidebarButton}" Click="NavigateToRooms">
+                    <Button x:Name="RoomsBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToRoomsCommand}" Tag="{Binding RoomsButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="🛏️" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Phòng" FontSize="14"/>
                         </StackPanel>
                     </Button>
                     
-                    <Button x:Name="BookingsBtn" Style="{StaticResource SidebarButton}" Click="NavigateToBookings">
+                    <Button x:Name="BookingsBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToBookingsCommand}" Tag="{Binding BookingsButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="📅" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Đặt phòng" FontSize="14"/>
                         </StackPanel>
                     </Button>
                     
-                    <Button x:Name="ReportsBtn" Style="{StaticResource SidebarButton}" Click="NavigateToReports">
+                    <Button x:Name="ReportsBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToReportsCommand}" Tag="{Binding ReportsButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="📈" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Báo cáo" FontSize="14"/>
                         </StackPanel>
                     </Button>
-                </StackPanel>
-                
+        </StackPanel>
+
                 <!-- Logout Button -->
                 <Button Grid.Row="2" Style="{StaticResource ErrorButton}" 
                         Margin="10,10,10,20" Height="45"
-                        Click="Logout_Click">
+                        Command="{Binding LogoutCommand}">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="🚪" FontSize="18" Margin="0,0,10,0"/>
                         <TextBlock Text="Đăng xuất" FontSize="14"/>
@@ -104,7 +105,7 @@
         <!-- Main Content Area -->
         <Grid Grid.Column="1" Margin="20">
             <!-- Dashboard View -->
-            <Grid x:Name="DashboardView" Visibility="Visible">
+            <Grid x:Name="DashboardView" Visibility="{Binding DashboardViewVisibility}">
                 <StackPanel>
                     <TextBlock Text="📊 Dashboard" 
                                FontSize="28" 
@@ -113,7 +114,7 @@
                                Margin="0,0,0,30"/>
                     
                     <!-- Stats Cards -->
-                    <Grid>
+                <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -126,7 +127,7 @@
                                 CornerRadius="15" Padding="20" Margin="0,0,10,0">
                             <StackPanel>
                                 <TextBlock Text="👥" FontSize="30" Margin="0,0,0,10" Foreground="White"/>
-                                <TextBlock x:Name="TotalCustomersText" Text="0" 
+                                <TextBlock x:Name="TotalCustomersText" Text="{Binding TotalCustomers}" 
                                            FontSize="32" FontWeight="Bold" 
                                            Foreground="{StaticResource TextWhiteBrush}"/>
                                 <TextBlock Text="Tổng khách hàng" 
@@ -140,7 +141,7 @@
                                 CornerRadius="15" Padding="20" Margin="5,0">
                             <StackPanel>
                                 <TextBlock Text="🛏️" FontSize="30" Margin="0,0,0,10" Foreground="White"/>
-                                <TextBlock x:Name="TotalRoomsText" Text="0" 
+                                <TextBlock x:Name="TotalRoomsText" Text="{Binding TotalRooms}" 
                                            FontSize="32" FontWeight="Bold" 
                                            Foreground="{StaticResource TextWhiteBrush}"/>
                                 <TextBlock Text="Tổng phòng" 
@@ -154,7 +155,7 @@
                                 CornerRadius="15" Padding="20" Margin="5,0">
                             <StackPanel>
                                 <TextBlock Text="📅" FontSize="30" Margin="0,0,0,10" Foreground="White"/>
-                                <TextBlock x:Name="TotalBookingsText" Text="0" 
+                                <TextBlock x:Name="TotalBookingsText" Text="{Binding TotalBookings}" 
                                            FontSize="32" FontWeight="Bold" 
                                            Foreground="{StaticResource TextWhiteBrush}"/>
                                 <TextBlock Text="Tổng đặt phòng" 
@@ -168,7 +169,7 @@
                                 CornerRadius="15" Padding="20" Margin="10,0,0,0">
                             <StackPanel>
                                 <TextBlock Text="💰" FontSize="30" Margin="0,0,0,10" Foreground="White"/>
-                                <TextBlock x:Name="TotalRevenueText" Text="0 VND" 
+                                <TextBlock x:Name="TotalRevenueText" Text="{Binding TotalRevenue}" 
                                            FontSize="28" FontWeight="Bold" 
                                            Foreground="{StaticResource SuccessBrush}"/>
                                 <TextBlock Text="Tổng doanh thu" 
@@ -181,13 +182,13 @@
             </Grid>
             
             <!-- Customers View -->
-            <Grid x:Name="CustomersView" Visibility="Collapsed">
-                <Grid.RowDefinitions>
+            <Grid x:Name="CustomersView" Visibility="{Binding CustomersViewVisibility}">
+                    <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
                 <TextBlock Grid.Row="0" Text="👥 Quản lý khách hàng" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextWhiteBrush}"
@@ -195,6 +196,7 @@
                 
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20">
                     <TextBox x:Name="CustomerSearchBox" 
+                             Text="{Binding CustomerSearchText, UpdateSourceTrigger=PropertyChanged}"
                              Width="350" Height="45" 
                              Style="{StaticResource SearchTextBox}"
                              VerticalContentAlignment="Center"
@@ -202,17 +204,18 @@
                     <Button Content="🔍 Tìm kiếm" 
                             Width="140" Height="45"
                             Style="{StaticResource ModernButton}"
-                            Click="SearchCustomer_Click"/>
+                            Command="{Binding SearchCustomerCommand}"/>
                     <Button Content="➕ Thêm mới" 
                             Width="130" Height="45"
                             Style="{StaticResource SuccessButton}"
                             Margin="15,0,0,0" 
-                            Click="AddCustomer_Click"/>
-                </StackPanel>
-                
+                            Command="{Binding AddCustomerCommand}"/>
+                    </StackPanel>
+
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
                     <DataGrid x:Name="CustomerDataGrid" 
+                              ItemsSource="{Binding Customers}"
                               Style="{StaticResource ModernDataGrid}"
                               ColumnHeaderStyle="{StaticResource ModernColumnHeader}"
                               CellStyle="{StaticResource ModernCell}">
@@ -229,13 +232,13 @@
                                             <Button Content="✏️" Width="40" Height="32"
                                                     Style="{StaticResource IconButton}"
                                                     Margin="0,0,5,0" 
-                                                    Click="EditCustomer_Click" 
-                                                    Tag="{Binding CustomerID}"
+                                                    Command="{Binding DataContext.EditCustomerCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding CustomerID}"
                                                     ToolTip="Sửa"/>
                                             <Button Content="🗑️" Width="40" Height="32"
                                                     Style="{StaticResource IconButton}"
-                                                    Click="DeleteCustomer_Click" 
-                                                    Tag="{Binding CustomerID}"
+                                                    Command="{Binding DataContext.DeleteCustomerCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding CustomerID}"
                                                     ToolTip="Xóa"/>
                                         </StackPanel>
                                     </DataTemplate>
@@ -244,16 +247,16 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </Border>
-            </Grid>
-            
+                </Grid>
+
             <!-- Rooms View -->
-            <Grid x:Name="RoomsView" Visibility="Collapsed">
-                <Grid.RowDefinitions>
+            <Grid x:Name="RoomsView" Visibility="{Binding RoomsViewVisibility}">
+                    <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
                 <TextBlock Grid.Row="0" Text="🛏️ Quản lý phòng" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextWhiteBrush}"
@@ -261,6 +264,7 @@
                 
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20">
                     <TextBox x:Name="RoomSearchBox" 
+                             Text="{Binding RoomSearchText, UpdateSourceTrigger=PropertyChanged}"
                              Width="350" Height="45" 
                              Style="{StaticResource SearchTextBox}"
                              VerticalContentAlignment="Center"
@@ -268,17 +272,18 @@
                     <Button Content="🔍 Tìm kiếm" 
                             Width="140" Height="45"
                             Style="{StaticResource ModernButton}"
-                            Click="SearchRoom_Click"/>
+                            Command="{Binding SearchRoomCommand}"/>
                     <Button Content="➕ Thêm mới" 
                             Width="130" Height="45"
                             Style="{StaticResource SuccessButton}"
                             Margin="15,0,0,0" 
-                            Click="AddRoom_Click"/>
-                </StackPanel>
-                
+                            Command="{Binding AddRoomCommand}"/>
+                    </StackPanel>
+
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
                     <DataGrid x:Name="RoomDataGrid" 
+                              ItemsSource="{Binding Rooms}"
                               Style="{StaticResource ModernDataGrid}"
                               ColumnHeaderStyle="{StaticResource ModernColumnHeader}"
                               CellStyle="{StaticResource ModernCell}">
@@ -296,13 +301,13 @@
                                             <Button Content="✏️" Width="40" Height="32"
                                                     Style="{StaticResource IconButton}"
                                                     Margin="0,0,5,0" 
-                                                    Click="EditRoom_Click" 
-                                                    Tag="{Binding RoomID}"
+                                                    Command="{Binding DataContext.EditRoomCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding RoomID}"
                                                     ToolTip="Sửa"/>
                                             <Button Content="🗑️" Width="40" Height="32"
                                                     Style="{StaticResource IconButton}"
-                                                    Click="DeleteRoom_Click" 
-                                                    Tag="{Binding RoomID}"
+                                                    Command="{Binding DataContext.DeleteRoomCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding RoomID}"
                                                     ToolTip="Xóa"/>
                                         </StackPanel>
                                     </DataTemplate>
@@ -314,7 +319,7 @@
             </Grid>
             
             <!-- Bookings View -->
-            <Grid x:Name="BookingsView" Visibility="Collapsed">
+            <Grid x:Name="BookingsView" Visibility="{Binding BookingsViewVisibility}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -330,13 +335,13 @@
                     <Button Content="🔄 Làm mới" 
                             Width="130" Height="45"
                             Style="{StaticResource ModernButton}"
-                            Click="RefreshAllBookings_Click"/>
+                            Command="{Binding RefreshBookingsCommand}"/>
                     <ComboBox x:Name="BookingStatusFilter" 
+                              SelectedIndex="{Binding SelectedBookingStatusFilter, Mode=TwoWay}"
                               Width="180" Height="45" 
                               Margin="15,0,0,0"
                               Style="{StaticResource ModernComboBox}"
-                              ItemContainerStyle="{StaticResource ModernComboBoxItem}"
-                              SelectionChanged="BookingStatusFilter_Changed">
+                              ItemContainerStyle="{StaticResource ModernComboBoxItem}">
                         <ComboBoxItem Content="Tất cả" Tag="0" IsSelected="True"/>
                         <ComboBoxItem Content="Chờ xác nhận" Tag="1"/>
                         <ComboBoxItem Content="Đã xác nhận" Tag="2"/>
@@ -347,6 +352,7 @@
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
                     <DataGrid x:Name="AllBookingsDataGrid" 
+                              ItemsSource="{Binding Bookings}"
                               Style="{StaticResource ModernDataGrid}"
                               ColumnHeaderStyle="{StaticResource ModernColumnHeader}"
                               CellStyle="{StaticResource ModernCell}">
@@ -373,13 +379,13 @@
                                             <Button Content="✏️" Width="40" Height="32"
                                                     Style="{StaticResource IconButton}"
                                                     Margin="0,0,5,0" 
-                                                    Click="EditBooking_Click" 
-                                                    Tag="{Binding BookingID}"
+                                                    Command="{Binding DataContext.EditBookingCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding BookingID}"
                                                     ToolTip="Sửa"/>
                                             <Button Content="❌" Width="40" Height="32"
                                                     Style="{StaticResource IconButton}"
-                                                    Click="CancelBooking_Click" 
-                                                    Tag="{Binding BookingID}"
+                                                    Command="{Binding DataContext.CancelBookingCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding BookingID}"
                                                     ToolTip="Hủy"/>
                                         </StackPanel>
                                     </DataTemplate>
@@ -388,16 +394,16 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </Border>
-            </Grid>
-            
+                </Grid>
+
             <!-- Reports View -->
-            <Grid x:Name="ReportsView" Visibility="Collapsed">
-                <Grid.RowDefinitions>
+            <Grid x:Name="ReportsView" Visibility="{Binding ReportsViewVisibility}">
+                    <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
                 <TextBlock Grid.Row="0" Text="📈 Báo cáo" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextWhiteBrush}"
@@ -409,6 +415,7 @@
                                Foreground="{StaticResource TextGrayBrush}"
                                Margin="0,0,10,0"/>
                     <DatePicker x:Name="StartDatePicker" 
+                                SelectedDate="{Binding ReportStartDate}"
                                 Width="150" Height="45" 
                                 Margin="0,0,20,0"
                                 Style="{StaticResource ModernDatePicker}"/>
@@ -417,18 +424,20 @@
                                Foreground="{StaticResource TextGrayBrush}"
                                Margin="0,0,10,0"/>
                     <DatePicker x:Name="EndDatePicker" 
+                                SelectedDate="{Binding ReportEndDate}"
                                 Width="150" Height="45" 
                                 Margin="0,0,20,0"
                                 Style="{StaticResource ModernDatePicker}"/>
                     <Button Content="📊 Xem báo cáo" 
                             Width="150" Height="45"
                             Style="{StaticResource ModernButton}"
-                            Click="ViewReport_Click"/>
-                </StackPanel>
-                
+                            Command="{Binding ViewReportCommand}"/>
+                    </StackPanel>
+
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
                     <DataGrid x:Name="ReportDataGrid" 
+                              ItemsSource="{Binding ReportBookings}"
                               Style="{StaticResource ModernDataGrid}"
                               ColumnHeaderStyle="{StaticResource ModernColumnHeader}"
                               CellStyle="{StaticResource ModernCell}">
@@ -444,6 +453,6 @@
                     </DataGrid>
                 </Border>
             </Grid>
-        </Grid>
+                </Grid>
     </Grid>
 </Window>

@@ -124,7 +124,7 @@ namespace FUMiniHotelSystemWPF.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PhamTrungTinWPF;component/views/bookingdialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PhamTrungTinWPF;V1.0.0.0;component/views/bookingdialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\BookingDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
