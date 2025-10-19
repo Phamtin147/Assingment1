@@ -1,7 +1,55 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\",
+  "WorkspaceRootPath": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\adminbookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\adminbookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFCCB5D9-916E-416A-BD4A-EFC772FCDEF9}|FUMiniHotelSystem.DataAccess\\FUMiniHotelSystem.DataAccess.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystem.dataaccess\\database\\inmemorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFCCB5D9-916E-416A-BD4A-EFC772FCDEF9}|FUMiniHotelSystem.DataAccess\\FUMiniHotelSystem.DataAccess.csproj|solutionrelative:fuminihotelsystem.dataaccess\\database\\inmemorydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\adminbookingdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\adminbookingdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\admindashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\admindashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\customerdashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\customerdashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\bookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\bookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\customerdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\customerdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\roomdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\roomdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\admindashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\admindashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\styles\\datagridstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\styles\\datagridstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\styles\\buttonstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\styles\\buttonstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\phamtrungtinwpf.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\phamtrungtinwpf.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -19,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\styles\\buttonstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\styles\\buttonstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\styles\\datepickerstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\styles\\datepickerstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -33,38 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\styles\\textboxstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\styles\\textboxstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\styles\\datagridstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\styles\\datagridstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\roomdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\roomdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\customerdashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\customerdashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\customerdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\customerdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\admindashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\admindashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\bookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\bookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\views\\adminbookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|solutionrelative:fuminihotelsystemwpf\\views\\adminbookingdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAEC0343-DC15-4275-B42D-33CED76BEA34}|FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj|c:\\users\\huhum\\documents\\github\\assingment1\\fuminihotelsystemwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -81,12 +93,221 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminBookingDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-19T03:00:57.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T12:17:57.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T12:18:07.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerDashboardWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-15T16:47:02.333Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "InMemoryDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystem.DataAccess\\Database\\InMemoryDatabase.cs",
+              "RelativeDocumentMoniker": "FUMiniHotelSystem.DataAccess\\Database\\InMemoryDatabase.cs",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystem.DataAccess\\Database\\InMemoryDatabase.cs",
+              "RelativeToolTip": "FUMiniHotelSystem.DataAccess\\Database\\InMemoryDatabase.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAcwDIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T02:15:14.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminBookingDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml.cs",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml.cs",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T03:00:02.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminDashboardWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-15T16:47:13.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoomDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T12:18:24.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-15T16:46:29.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataGridStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T13:46:02.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ButtonStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T13:44:26.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminDashboardWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml.cs",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T02:24:40.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ComboBoxStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T13:46:04.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T13:46:07.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DatePickerStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T13:46:03.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\App.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\App.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\App.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T12:07:48.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PhamTrungTinWPF.csproj",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-15T16:45:30.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "BookingStatusConverter.cs",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Converters\\BookingStatusConverter.cs",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Converters\\BookingStatusConverter.cs",
               "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Converters\\BookingStatusConverter.cs",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Converters\\BookingStatusConverter.cs",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Converters\\BookingStatusConverter.cs",
               "RelativeToolTip": "FUMiniHotelSystemWPF\\Converters\\BookingStatusConverter.cs",
               "ViewState": "AgIAAA8AAACgyH9YQyQswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -94,178 +315,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ComboBoxStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\ComboBoxStyles.xaml",
+              "DocumentIndex": 18,
+              "Title": "TextBoxStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
+              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
+              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T13:46:04.819Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PhamTrungTinWPF.csproj",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\PhamTrungTinWPF.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-15T16:45:30.563Z",
+              "WhenOpened": "2025-10-16T13:10:28.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\App.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\App.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\App.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T12:07:48.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ButtonStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\ButtonStyles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T13:44:26.394Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DatePickerStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\DatePickerStyles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T13:46:03.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Colors.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\Colors.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T13:46:07.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TextBoxStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\TextBoxStyles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T13:10:28.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DataGridStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Styles\\DataGridStyles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T13:46:02.616Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RoomDialog.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\RoomDialog.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T12:18:24.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-15T16:46:29.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CustomerDashboardWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\CustomerDashboardWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-15T16:47:02.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CustomerDialog.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\CustomerDialog.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T12:18:07.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AdminDashboardWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\AdminDashboardWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-15T16:47:13.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BookingDialog.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\BookingDialog.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T12:17:57.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminBookingDialog.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
-              "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
-              "RelativeToolTip": "FUMiniHotelSystemWPF\\Views\\AdminBookingDialog.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T12:19:50.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "FUMiniHotelSystemWPF\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\huhum\\Documents\\Github\\Assingment1\\FUMiniHotelSystemWPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\huhum\\Documents\\GitHub\\Assingment1\\FUMiniHotelSystemWPF\\MainWindow.xaml",
               "RelativeToolTip": "FUMiniHotelSystemWPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-10-15T16:46:13.625Z"

@@ -10,21 +10,21 @@
     <Window.Resources>
         <converters:BookingStatusConverter x:Key="BookingStatusConverter"/>
     </Window.Resources>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="260"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!-- Sidebar -->
         <Border Grid.Column="0" Background="{StaticResource SidebarDarkBrush}" CornerRadius="0,20,0,0">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <Grid>
+                <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
                 <!-- Logo & Title -->
                 <StackPanel Grid.Row="0" Margin="20,30,20,40">
@@ -37,13 +37,13 @@
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock Text="🏨" FontSize="35" HorizontalAlignment="Center" Margin="0,-55,0,15"/>
-                    
+
                     <TextBlock Text="Quản trị viên" 
                                FontSize="20" 
                                FontWeight="Bold" 
                                Foreground="{StaticResource TextWhiteBrush}" 
                                HorizontalAlignment="Center"/>
-                    
+
                     <TextBlock x:Name="WelcomeTextBlock"
                                Text="{Binding WelcomeText}"
                                FontSize="12" 
@@ -51,7 +51,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,5,0,0"/>
                 </StackPanel>
-                
+
                 <!-- Navigation Menu -->
                 <StackPanel Grid.Row="1" Margin="10,0">
                     <Button x:Name="DashboardBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToDashboardCommand}" Tag="{Binding DashboardButtonTag}">
@@ -60,35 +60,35 @@
                             <TextBlock Text="Tổng quan" FontSize="14"/>
                         </StackPanel>
                     </Button>
-                    
+
                     <Button x:Name="CustomersBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToCustomersCommand}" Tag="{Binding CustomersButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="👥" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Khách hàng" FontSize="14"/>
                         </StackPanel>
                     </Button>
-                    
+
                     <Button x:Name="RoomsBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToRoomsCommand}" Tag="{Binding RoomsButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="🛏️" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Phòng" FontSize="14"/>
                         </StackPanel>
                     </Button>
-                    
+
                     <Button x:Name="BookingsBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToBookingsCommand}" Tag="{Binding BookingsButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="📅" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Đặt phòng" FontSize="14"/>
                         </StackPanel>
                     </Button>
-                    
+
                     <Button x:Name="ReportsBtn" Style="{StaticResource SidebarButton}" Command="{Binding NavigateToReportsCommand}" Tag="{Binding ReportsButtonTag}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="📈" FontSize="18" Margin="0,0,15,0"/>
                             <TextBlock Text="Báo cáo" FontSize="14"/>
                         </StackPanel>
                     </Button>
-        </StackPanel>
+                </StackPanel>
 
                 <!-- Logout Button -->
                 <Button Grid.Row="2" Style="{StaticResource ErrorButton}" 
@@ -101,7 +101,7 @@
                 </Button>
             </Grid>
         </Border>
-        
+
         <!-- Main Content Area -->
         <Grid Grid.Column="1" Margin="20">
             <!-- Dashboard View -->
@@ -112,16 +112,16 @@
                                FontWeight="Bold" 
                                Foreground="{StaticResource TextWhiteBrush}"
                                Margin="0,0,0,30"/>
-                    
+
                     <!-- Stats Cards -->
-                <Grid>
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <!-- Card 1 -->
                         <Border Grid.Column="0" Background="{StaticResource CardBackgroundBrush}" 
                                 CornerRadius="15" Padding="20" Margin="0,0,10,0">
@@ -135,7 +135,7 @@
                                            FontSize="14"/>
                             </StackPanel>
                         </Border>
-                        
+
                         <!-- Card 2 -->
                         <Border Grid.Column="1" Background="{StaticResource CardBackgroundBrush}" 
                                 CornerRadius="15" Padding="20" Margin="5,0">
@@ -149,7 +149,7 @@
                                            FontSize="14"/>
                             </StackPanel>
                         </Border>
-                        
+
                         <!-- Card 3 -->
                         <Border Grid.Column="2" Background="{StaticResource CardBackgroundBrush}" 
                                 CornerRadius="15" Padding="20" Margin="5,0">
@@ -163,7 +163,7 @@
                                            FontSize="14"/>
                             </StackPanel>
                         </Border>
-                        
+
                         <!-- Card 4 -->
                         <Border Grid.Column="3" Background="{StaticResource CardBackgroundBrush}" 
                                 CornerRadius="15" Padding="20" Margin="10,0,0,0">
@@ -180,20 +180,20 @@
                     </Grid>
                 </StackPanel>
             </Grid>
-            
+
             <!-- Customers View -->
             <Grid x:Name="CustomersView" Visibility="{Binding CustomersViewVisibility}">
-                    <Grid.RowDefinitions>
+                <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="👥 Quản lý khách hàng" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextWhiteBrush}"
                            Margin="0,0,0,20"/>
-                
+
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20">
                     <TextBox x:Name="CustomerSearchBox" 
                              Text="{Binding CustomerSearchText, UpdateSourceTrigger=PropertyChanged}"
@@ -210,7 +210,7 @@
                             Style="{StaticResource SuccessButton}"
                             Margin="15,0,0,0" 
                             Command="{Binding AddCustomerCommand}"/>
-                    </StackPanel>
+                </StackPanel>
 
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
@@ -247,21 +247,21 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </Border>
-                </Grid>
+            </Grid>
 
             <!-- Rooms View -->
             <Grid x:Name="RoomsView" Visibility="{Binding RoomsViewVisibility}">
-                    <Grid.RowDefinitions>
+                <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="🛏️ Quản lý phòng" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextWhiteBrush}"
                            Margin="0,0,0,20"/>
-                
+
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20">
                     <TextBox x:Name="RoomSearchBox" 
                              Text="{Binding RoomSearchText, UpdateSourceTrigger=PropertyChanged}"
@@ -278,7 +278,7 @@
                             Style="{StaticResource SuccessButton}"
                             Margin="15,0,0,0" 
                             Command="{Binding AddRoomCommand}"/>
-                    </StackPanel>
+                </StackPanel>
 
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
@@ -317,7 +317,7 @@
                     </DataGrid>
                 </Border>
             </Grid>
-            
+
             <!-- Bookings View -->
             <Grid x:Name="BookingsView" Visibility="{Binding BookingsViewVisibility}">
                 <Grid.RowDefinitions>
@@ -325,12 +325,12 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                
+
                 <TextBlock Grid.Row="0" Text="📅 Quản lý đặt phòng" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextWhiteBrush}"
                            Margin="0,0,0,20"/>
-                
+
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20">
                     <Button Content="🔄 Làm mới" 
                             Width="130" Height="45"
@@ -348,7 +348,7 @@
                         <ComboBoxItem Content="Đã hủy" Tag="3"/>
                     </ComboBox>
                 </StackPanel>
-                
+
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
                     <DataGrid x:Name="AllBookingsDataGrid" 
@@ -394,21 +394,21 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </Border>
-                </Grid>
+            </Grid>
 
             <!-- Reports View -->
             <Grid x:Name="ReportsView" Visibility="{Binding ReportsViewVisibility}">
-                    <Grid.RowDefinitions>
+                <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="📈 Báo cáo" 
                            FontSize="28" FontWeight="Bold" 
                            Foreground="{StaticResource TextWhiteBrush}"
                            Margin="0,0,0,20"/>
-                
+
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20">
                     <TextBlock Text="Từ ngày:" 
                                VerticalAlignment="Center" 
@@ -432,7 +432,7 @@
                             Width="150" Height="45"
                             Style="{StaticResource ModernButton}"
                             Command="{Binding ViewReportCommand}"/>
-                    </StackPanel>
+                </StackPanel>
 
                 <Border Grid.Row="2" Background="{StaticResource CardBackgroundBrush}" 
                         CornerRadius="15" Padding="0">
@@ -453,6 +453,6 @@
                     </DataGrid>
                 </Border>
             </Grid>
-                </Grid>
+        </Grid>
     </Grid>
 </Window>
